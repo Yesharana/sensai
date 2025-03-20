@@ -4,6 +4,7 @@ import PerformanceChart from "./_components/performance-chart";
 import QuizList from "./_components/quiz-list";
 
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 const InterviewPage = async () => {
     const assessments = await getAssessments();
