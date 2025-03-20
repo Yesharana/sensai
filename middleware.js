@@ -17,6 +17,9 @@ export default clerkMiddleware(async(auth, req) => {
     const {redirectToSignIn} = await auth()
     return redirectToSignIn()
   }
+  if (userId && req.nextUrl.pathname === "/") {
+    return NextResponse.redirect(new URL("/onboarding", req.url));
+  }
 
   return NextResponse.next();
 
