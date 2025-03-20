@@ -146,8 +146,7 @@ export async function saveQuizResult(questions, answers, score) {
         throw error; // Rethrow to preserve the original error
     }
 }
-export const dynamic = 'force-dynamic';
-export const fetchCache = 'force-no-store';
+
 export async function getAssessments(){
     try {
         const { userId } = await auth();
