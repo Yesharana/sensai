@@ -3,6 +3,8 @@ import StatsCards from "./_components/stats-cards";
 import PerformanceChart from "./_components/performance-chart";
 import QuizList from "./_components/quiz-list";
 
+export const dynamic = 'force-dynamic';
+
 const InterviewPage = async () => {
     const assessments = await getAssessments();
     return (
