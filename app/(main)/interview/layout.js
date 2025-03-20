@@ -1,6 +1,9 @@
 import React, { Suspense } from 'react';
 import { BarLoader } from "react-spinners";
 
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 const Layout = ({ children }) => {
   return ( 
   <div className="px-5">
