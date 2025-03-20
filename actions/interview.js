@@ -3,8 +3,6 @@ import { auth } from "@clerk/nextjs/server";
 import { db } from "@/lib/prisma";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-export const dynamic = 'force-dynamic';
-export const fetchCache = 'force-no-store';
 
 // Check if API key exists and log status (without exposing the key)
 const apiKey = process.env.GEMINI_API_KEY;
@@ -148,7 +146,8 @@ export async function saveQuizResult(questions, answers, score) {
         throw error; // Rethrow to preserve the original error
     }
 }
-
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 export async function getAssessments(){
     try {
         const { userId } = await auth();
